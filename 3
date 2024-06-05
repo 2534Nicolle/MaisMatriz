@@ -1,0 +1,32 @@
+package lpa2;
+import java.util.Scanner;
+public class Totti {
+
+	public static void main(String[] args) {
+		int senhaMaster, senhaAttempt;
+		double N1, N2, SOMA;
+		
+		Scanner ler = new Scanner(System.in);
+		
+		System.out.print("Cadastre uma senha ( Apenas números ): ");
+		senhaMaster = ler.nextInt();
+		
+		System.out.print("Digite um número: ");
+		N1 = ler.nextDouble();
+		System.out.print("Digite outro número: ");
+		N2 = ler.nextDouble();
+		SOMA = N1 + N2;
+		
+		System.out.print("Digite a sua senha para desbloquear a soma: ");
+		senhaAttempt = ler.nextInt();
+
+		if (senhaAttempt == senhaMaster) {
+			System.out.println("A soma é: " + SOMA);
+		}
+		if (senhaAttempt != senhaMaster) {
+			System.out.println("Erro! Senha errada! ");
+		}
+		ler.close();
+	}
+
+}
